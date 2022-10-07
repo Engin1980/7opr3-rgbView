@@ -1,3 +1,18 @@
-Hodnota je {{value}}.
-<input type="range" [ngModel]="value" (ngModelChange)="value = $event"/>
-<input type="number" [ngModel]="value"/>
+<div style="width:400px">
+  <div>
+    <label class="form-label">Red</label>
+    <app-value-editor [(value)]="valueR"></app-value-editor>
+  </div>
+  <div>
+    <label class="form-label">Green</label>
+    <app-value-editor [(value)]="valueG"></app-value-editor>
+  </div>
+  <div>
+    <label class="form-label">Blue</label>
+    <app-value-editor [(value)]="valueB"></app-value-editor>
+  </div>
+</div>
+
+<div class="mt-4">
+  <div id="box" [style.background-color]="getRgbCode()"></div>
+</div>

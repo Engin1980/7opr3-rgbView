@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rgb-view';
-  value = 10;
+
+  valueR = 50;
+  valueG = 100;
+  valueB = 150;
+
+  getRgbCode():string{
+    const ret = "rgb(" + this.valueR + ", " + this.valueG + ", " + this.valueB + ")";
+    return ret
+  }
 }
